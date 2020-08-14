@@ -1,0 +1,58 @@
+<mvc:View controllerName="AB.Table.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+xmlns:tab="sap.ui.table" xmlns:form="sap.ui.layout.form">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>AggregationBinding}">
+					<content>
+					<tab:Table rows="{/EmployeeList}" id="idTable" selectionMode="Single" rowSelectionChange="onRowSelect" >
+						<tab:columns>
+							
+							<tab:Column>
+								<tab:label>
+									<Label text="empId"></Label>
+								</tab:label>
+								<tab:template>
+									<Text text="{empId}"></Text>
+								</tab:template>
+							</tab:Column>
+							
+							<tab:Column>
+								<tab:label>
+									<Label text="empName"></Label>
+								</tab:label>
+								<tab:template>
+									<Input value="{empName}"></Input>
+								</tab:template>
+							</tab:Column>
+							
+							<tab:Column>
+								<tab:label>
+									<Label text="empSalary"></Label>
+								</tab:label>
+								<tab:template>
+									<Input value="{empSalary}" enabled="{=${empSalary} > 15000 ? false : true}"></Input>
+								</tab:template>
+							</tab:Column>
+							
+						</tab:columns>
+					</tab:Table>
+					
+				<form:SimpleForm editable="true" id="form">
+							<form:content>
+							<Label text="EmployeeId" ></Label>
+							<Input value="{empId}"></Input>
+							
+							<Label text="EmployeeName" ></Label>
+							<Input value="{empName}"></Input>
+							
+								<Label text="EmployeeSalary" ></Label>
+							<Input value="{empSalary}"></Input>
+							</form:content>
+						</form:SimpleForm>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,27 @@
+{
+	"EmployeeList":[
+		{
+			"empId":101,
+			"empName":"Ramesh",
+			"empSalary":25000
+		},
+			{
+			"empId":102,
+			"empName":"Ram",
+			"empSalary":10000
+		},
+			{
+			"empId":103,
+			"empName":"Raju",
+			"empSalary":85000
+		},
+			{
+			"empId":104,
+			"empName":"Rajesh",
+			"empSalary":75000
+		}
+		]
+		
+
+
+}

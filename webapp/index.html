@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Table</title>
+		<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_fiori_3"
+			data-sap-ui-resourceroots='{"AB.Table": "./"}'
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+			data-sap-ui-async="true"
+			data-sap-ui-frameOptions="trusted">
+		</script>
+			<script>
+			
+			new sap.ui.view({
+				id:"abView",
+				viewName:"AB.view.View1",
+				type:sap.ui.core.mvc.ViewType.XML
+			}).placeAt("abViews");
+		</script>
+	</head>
+	<body class="sapUiBody">
+		<div data-sap-ui-component data-name="AB.Table" data-id="container" data-settings='{"id" : "Table"}'></div>
+		<div id="adViews"></div>
+	</body>
+</html>
